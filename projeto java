@@ -1,0 +1,47 @@
+
+// Importa a classe Scanner para ler dados do teclado
+import java.util.Scanner;
+
+// Classe principal (todo programa Java começa por uma classe)
+public class Main {
+
+    // Método principal (ponto de entrada do programa)
+    public static void main(String[] args) {
+
+        // Criando objeto Scanner para entrada de dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Variáveis
+        String nome;
+        double nota1, nota2, media;
+
+        // Entrada de dados
+        System.out.println("Digite o nome do aluno:");
+        nome = scanner.nextLine(); // lê texto
+
+        System.out.println("Digite a primeira nota:");
+        nota1 = scanner.nextDouble(); // lê número decimal
+
+        System.out.println("Digite a segunda nota:");
+        nota2 = scanner.nextDouble();
+
+        // Processamento (cálculo da média)
+        media = (nota1 + nota2) / 2;
+
+        // Saída de dados
+        System.out.println("\nAluno: " + nome);
+        System.out.println("Média: " + media);
+
+        // Estrutura de decisão (if/else)
+        if (media >= 7) {
+            System.out.println("Status: Aprovado ✅");
+        } else if (media >= 5) {
+            System.out.println("Status: Recuperação ⚠️");
+        } else {
+            System.out.println("Status: Reprovado ❌");
+        }
+
+        // Fecha o scanner (boa prática)
+        scanner.close();
+    }
+}
